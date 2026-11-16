@@ -39,10 +39,8 @@ section { padding: 80px 0; }
 .section-title { font-size: 28px; font-weight: 700; text-transform: uppercase; text-align: center; margin-bottom: var(--sp-5); letter-spacing: 1px; }
 
 /* =========================================
-   3. АНІМАЦІЇ (@KEYFRAMES) - МОДУЛЬ 7
+   3. АНІМАЦІЇ (@KEYFRAMES)
    ========================================= */
-
-/* Анімація появи елементів знизу */
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -54,14 +52,12 @@ section { padding: 80px 0; }
   }
 }
 
-/* Пульсуюче світіння для виділеної стрічки */
 @keyframes pulse-glow {
   0% { box-shadow: 0 0 0 0 rgba(210, 180, 140, 0.4); }
   70% { box-shadow: 0 0 0 6px rgba(210, 180, 140, 0); }
   100% { box-shadow: 0 0 0 0 rgba(210, 180, 140, 0); }
 }
 
-/* Обертання (на майбутнє або для загрузок) */
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
@@ -74,7 +70,6 @@ section { padding: 80px 0; }
   padding: 14px 28px; border: 2px solid transparent; border-radius: var(--r-sm); 
   font: inherit; font-weight: 700; line-height: 1; text-transform: uppercase; 
   letter-spacing: 1px; cursor: pointer; 
-  /* Модуль 7: Плавні переходи (transition) */
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
 }
 .btn--primary { background-color: var(--accent-purple); color: #fff; }
@@ -102,7 +97,7 @@ section { padding: 80px 0; }
 .nav-toggle { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .burger { display: none; }
 
-/* Перший екран із застосуванням @keyframes */
+/* Перший екран */
 .hero { position: relative; background: url("../img/hero-hall.jpg") center/cover no-repeat; padding: 120px 0; }
 .hero::before { content: ""; position: absolute; inset: 0; background: rgba(11, 14, 20, 0.75); z-index: 1; }
 .hero__inner { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: var(--sp-5); }
@@ -112,21 +107,20 @@ section { padding: 80px 0; }
 .hero__badge-title { font-size: 28px; font-weight: 900; letter-spacing: 3px; color: var(--text-main); }
 .hero__badge-sub { font-size: 12px; letter-spacing: 4px; color: var(--accent-gold); }
 
-/* Каскадна поява елементів */
 .hero__title { font-size: 48px; line-height: 1.1; text-transform: uppercase; margin-bottom: var(--sp-2); font-weight: 800; animation: fade-in-up 0.6s ease-out both; }
 .hero__text { font-size: 18px; color: var(--text-muted); margin-bottom: var(--sp-4); animation: fade-in-up 0.6s ease-out 0.2s both; }
 .hero__btn { animation: fade-in-up 0.6s ease-out 0.4s both; }
 .hero__badge { animation: fade-in-up 0.8s ease-out 0.5s both; }
 
-
-/* Картки послуг (Анімація масштабування фото) */
+/* Картки послуг, майстрів, відгуків та локацій */
 .cards { display: flex; gap: var(--sp-3); align-items: stretch; }
-.card, .barber-card { flex: 1; background-color: var(--bg-card); border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--line); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
-.card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--accent-purple); }
+.card, .barber-card, .branch-card { flex: 1; background-color: var(--bg-card); border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--line); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+.card:hover, .branch-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--accent-purple); }
 
-.card__photo-wrap { overflow: hidden; } /* Щоб картинка не вилазила при масштабуванні */
+.card__photo-wrap { overflow: hidden; }
 .card__img { width: 100%; height: 180px; object-fit: cover; transition: transform 0.4s ease-out; }
-.card:hover .card__img { transform: scale(1.05); }
+.branch-card__img { width: 100%; height: 240px; object-fit: cover; transition: transform 0.4s ease-out; }
+.card:hover .card__img, .branch-card:hover .branch-card__img { transform: scale(1.05); }
 
 .card__body { padding: var(--sp-3); display: flex; flex-direction: column; flex-grow: 1; }
 .card__title { font-size: 20px; margin-bottom: var(--sp-1); }
@@ -139,11 +133,28 @@ section { padding: 80px 0; }
 .barber-card__name { font-weight: 600; }
 .barber-card__rating { color: var(--accent-gold); font-weight: 700; }
 
+/* Акційний банер */
+.promo { position: relative; background: url("../img/promo-bg.jpg") center/cover no-repeat; text-align: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.promo::before { content: ""; position: absolute; inset: 0; background: rgba(11, 14, 20, 0.8); z-index: 1; }
+.promo__inner { position: relative; z-index: 2; max-width: 720px; }
+.promo__badge { display: inline-block; padding: 6px 14px; border-radius: var(--r-pill); background-color: rgba(210, 180, 140, 0.15); border: 1px solid var(--accent-gold); color: var(--accent-gold); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: var(--sp-2); }
+.promo__title { font-size: 36px; font-weight: 800; text-transform: uppercase; margin-bottom: var(--sp-2); }
+.promo__text { font-size: 17px; color: var(--text-muted); margin-bottom: var(--sp-4); }
+
+/* Відгуки клієнтів */
+.review-card { flex: 1; background-color: var(--bg-card); border: 1px solid var(--line); border-radius: var(--r-md); padding: var(--sp-3); display: flex; flex-direction: column; gap: var(--sp-2); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+.review-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--accent-gold); }
+.review-card__header { display: flex; align-items: center; gap: var(--sp-2); }
+.review-card__avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-gold); flex-shrink: 0; }
+.review-card__author { font-size: 18px; font-weight: 700; }
+.review-card__rating { color: var(--accent-gold); font-size: 14px; letter-spacing: 2px; }
+.review-card__text { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+
 /* =========================================
    6. ТАРИФНИЙ БЛОК
    ========================================= */
 .pricing__grid { display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: stretch; }
-.plan { position: relative; flex: 1 1 320px; display: flex; flex-direction: column; padding: var(--sp-5) var(--sp-4); background-color: var(--bg-card); border: 1px solid var(--line); border-radius: var(--r-md); transition: all 0.3s ease; overflow: hidden; }
+.plan { position: relative; flex: 1 1 320px; display: flex; flex-direction: column; padding: var(--sp-5) var(--sp-4); background-color: var(--bg-card); border: 1px solid var(--line); border-radius: var(--r-md); transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden; }
 .plan:hover { background-color: var(--bg-card-hover); border-color: #3b4455; transform: translateY(-8px); box-shadow: var(--shadow); }
 .plan__name { margin: 0 0 var(--sp-1); font-size: 20px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
 .plan__price { margin: 0 0 var(--sp-4); font-size: 48px; font-weight: 800; color: var(--text-main); line-height: 1; }
@@ -159,11 +170,11 @@ section { padding: 80px 0; }
   position: absolute; top: 20px; right: -35px; background-color: var(--accent-gold); 
   color: var(--bg-dark); padding: 6px 40px; font-size: 11px; font-weight: 800; 
   text-transform: uppercase; letter-spacing: 2px; transform: rotate(45deg); 
-  animation: pulse-glow 2.5s infinite; /* Пульсація */
+  animation: pulse-glow 2.5s infinite;
 }
 
 /* =========================================
-   7. ФОРМА ТА ТАБЛИЦЯ
+   7. ФОРМА, ТАБЛИЦЯ, ВІДЕО ТА ПІДВАЛ
    ========================================= */
 .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-md); background-color: var(--bg-card); }
 .price-table { width: 100%; border-collapse: collapse; min-width: 500px; }
@@ -222,7 +233,7 @@ section { padding: 80px 0; }
   .hero__content, .hero__media { width: 100%; }
   
   .cards { flex-wrap: wrap; }
-  .card, .barber-card { flex: 1 1 45%; }
+  .card, .barber-card, .review-card, .branch-card { flex: 1 1 45%; }
   
   .plan { flex: 1 1 100%; padding: var(--sp-4); }
   .plan--featured { order: -1; }
@@ -235,15 +246,15 @@ section { padding: 80px 0; }
   section { padding: 60px 0; }
   .hero, .hero-video { padding: 80px 0; }
   .hero__title { font-size: 36px; }
-  .hero-video__title { font-size: 28px; }
+  .promo__title, .hero-video__title { font-size: 28px; }
   .cards { flex-direction: column; }
-  .card, .barber-card { flex: 1 1 auto; }
+  .card, .barber-card, .review-card, .branch-card { flex: 1 1 auto; }
   .header__btn { display: none; }
   .form { padding: var(--sp-3) 16px; }
 }
 
 /* =========================================
-   9. ДОСТУПНІСТЬ АНІМАЦІЙ (МОДУЛЬ 7)
+   9. ДОСТУПНІСТЬ АНІМАЦІЙ
    ========================================= */
 @media (prefers-reduced-motion: reduce) {
   *,

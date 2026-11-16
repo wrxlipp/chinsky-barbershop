@@ -26,7 +26,8 @@
           <li><a class="menu__link" href="#services">Послуги</a></li>
           <li><a class="menu__link" href="#pricing">Тарифи</a></li>
           <li><a class="menu__link" href="#barbers">Майстри</a></li>
-          <li><a class="menu__link" href="#contacts">Контакти</a></li>
+          <li><a class="menu__link" href="#reviews">Відгуки</a></li>
+          <li><a class="menu__link" href="#branches">Локації</a></li>
         </ul>
       </nav>
       
@@ -35,7 +36,7 @@
   </header>
 
   <main>
-    <!-- ПЕРШИЙ ЕКРАН (Анімація @keyframes fade-in-up) -->
+    <!-- ПЕРШИЙ ЕКРАН -->
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__content">
@@ -52,13 +53,12 @@
       </div>
     </section>
 
-    <!-- ПОСЛУГИ (Анімація масштабування фото) -->
+    <!-- ПОСЛУГИ -->
     <section class="services" id="services">
       <div class="container">
         <h2 class="section-title">Наші напрямки</h2>
         <div class="cards">
           <article class="card">
-            <!-- Обгортка для overflow:hidden -->
             <div class="card__photo-wrap">
               <img src="img/service-1.jpg" alt="Стрижка" width="380" height="180" class="card__img" loading="lazy" decoding="async">
             </div>
@@ -92,7 +92,17 @@
       </div>
     </section>
 
-    <!-- ТАРИФНІ ПАКЕТИ (Анімація підняття і пульсуюча стрічка) -->
+    <!-- АКЦІЙНИЙ БАНЕР (promo-bg.jpg) -->
+    <section class="promo">
+      <div class="container promo__inner">
+        <span class="promo__badge">Спеціальна пропозиція</span>
+        <h2 class="promo__title">-20% на перший візит у CHINSKY</h2>
+        <p class="promo__text">Знайомся з майстрами, оціни атмосферу та отримай професійну консультацію зі стилю.</p>
+        <a href="#booking" class="btn btn--accent">Забрати знижку</a>
+      </div>
+    </section>
+
+    <!-- ТАРИФНІ ПАКЕТИ -->
     <section class="pricing" id="pricing">
       <div class="container">
         <h2 class="section-title">Тарифи & Пакети</h2>
@@ -143,7 +153,7 @@
         <h2 class="section-title">Додаткові послуги</h2>
         <div class="table-wrap">
           <table class="price-table">
-            <caption>Можна додати до будь-якого пакету (Ціни 2024 року)</caption>
+            <caption>Можна додати до будь-якого пакету</caption>
             <thead>
               <tr>
                 <th scope="col">Послуга</th>
@@ -208,6 +218,77 @@
             <div class="barber-card__footer">
               <span class="barber-card__name">Микита</span>
               <span class="barber-card__rating">★ 5.0</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВІДГУКИ КЛІЄНТІВ (user-1.jpg, user-2.jpg, user-3.jpg) -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <h2 class="section-title">Відгуки клієнтів</h2>
+        <div class="cards">
+          <article class="review-card">
+            <div class="review-card__header">
+              <img src="img/user-1.jpg" alt="Клієнт Дмитро" width="56" height="56" class="review-card__avatar" loading="lazy" decoding="async">
+              <div>
+                <h3 class="review-card__author">Дмитро К.</h3>
+                <span class="review-card__rating">★★★★★</span>
+              </div>
+            </div>
+            <p class="review-card__text">«Стрижуся в Альони вже пів року. Завжди ідеальний фейд, приємна музика і класна атмосфера в самому центрі Львова.»</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <img src="img/user-2.jpg" alt="Клієнт Андрій" width="56" height="56" class="review-card__avatar" loading="lazy" decoding="async">
+              <div>
+                <h3 class="review-card__author">Андрій М.</h3>
+                <span class="review-card__rating">★★★★★</span>
+              </div>
+            </div>
+            <p class="review-card__text">«Брав пакет "Повний догляд" у Микити — гаряче розпарювання та корекція бороди на найвищому рівні. Однозначно рекомендую.»</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <img src="img/user-3.jpg" alt="Клієнт Тарас" width="56" height="56" class="review-card__avatar" loading="lazy" decoding="async">
+              <div>
+                <h3 class="review-card__author">Тарас В.</h3>
+                <span class="review-card__rating">★★★★★</span>
+              </div>
+            </div>
+            <p class="review-card__text">«Приходив разом із сином. Ліля швидко знайшла підхід до малого, обидва вийшли задоволені та стильні.»</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- НАШІ ЛОКАЦІЇ (branch-1.jpg, branch-2.jpg) -->
+    <section class="branches" id="branches">
+      <div class="container">
+        <h2 class="section-title">Наші локації у Львові</h2>
+        <div class="cards">
+          <article class="branch-card">
+            <div class="card__photo-wrap">
+              <img src="img/branch-1.jpg" alt="Філія CHINSKY Центр" width="580" height="240" class="branch-card__img" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">CHINSKY — Центр</h3>
+              <p class="card__text">вул. Винниченка, 30 · Пн–Нд: 09:00 – 21:00</p>
+              <span class="card__meta">📍 5 хв від площі Ринок</span>
+            </div>
+          </article>
+
+          <article class="branch-card">
+            <div class="card__photo-wrap">
+              <img src="img/branch-2.jpg" alt="Філія CHINSKY Франківський район" width="580" height="240" class="branch-card__img" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">CHINSKY — Сахарова</h3>
+              <p class="card__text">вул. Академіка Сахарова, 42 · Пн–Нд: 10:00 – 21:00</p>
+              <span class="card__meta">🅿️ Зручний паркінг біля входу</span>
             </div>
           </article>
         </div>
