@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Барбершоп «CHINSKY» у Львові — Чоловічі стрижки</title>
+  <meta name="description" content="Робимо чоловіків стильними у центрі Львова. Чоловічі та подовжені стрижки, догляд за бородою. Запишіться онлайн.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <span class="logo__text">CHINSKY</span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="burger" for="nav-toggle" aria-label="Відкрити меню">
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <ul class="menu">
+          <li><a class="menu__link" href="#services">Послуги</a></li>
+          <li><a class="menu__link" href="#pricing">Тарифи</a></li>
+          <li><a class="menu__link" href="#barbers">Майстри</a></li>
+          <li><a class="menu__link" href="#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+      
+      <a href="#booking" class="btn btn--primary btn--small header__btn">Записатися</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ПЕРШИЙ ЕКРАН (Анімація @keyframes fade-in-up) -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">Робимо чоловіків стильними</h1>
+          <p class="hero__text">Твій ідеальний образ в центрі Львова</p>
+          <a href="#barbers" class="btn btn--primary hero__btn">Вибрати майстра</a>
+        </div>
+        <div class="hero__media">
+          <div class="hero__badge">
+            <span class="hero__badge-title">CHINSKY</span>
+            <span class="hero__badge-sub">BARBERSHOP</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОСЛУГИ (Анімація масштабування фото) -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title">Наші напрямки</h2>
+        <div class="cards">
+          <article class="card">
+            <!-- Обгортка для overflow:hidden -->
+            <div class="card__photo-wrap">
+              <img src="img/service-1.jpg" alt="Стрижка" width="380" height="180" class="card__img" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Класична стрижка</h3>
+              <p class="card__text">Підбір форми під тип обличчя, миття голови та професійне укладання.</p>
+              <span class="card__meta">⏱ Тривалість: ~45 хв</span>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__photo-wrap">
+              <img src="img/service-2.jpg" alt="Подовжена стрижка" width="380" height="180" class="card__img" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Робота з довжиною</h3>
+              <p class="card__text">Моделювання подовжених стрижок, створення текстури та рекомендації з догляду.</p>
+              <span class="card__meta">⏱ Тривалість: ~60 хв</span>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__photo-wrap">
+              <img src="img/service-3.jpg" alt="Стрижка бороди" width="380" height="180" class="card__img" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Королівська борода</h3>
+              <p class="card__text">Корекція контурів небезпечною бритвою, розпарювання та догляд преміум-оліями.</p>
+              <span class="card__meta">⏱ Тривалість: ~30 хв</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ТАРИФНІ ПАКЕТИ (Анімація підняття і пульсуюча стрічка) -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <h2 class="section-title">Тарифи & Пакети</h2>
+        <div class="pricing__grid">
+
+          <article class="plan">
+            <h3 class="plan__name">Базовий</h3>
+            <p class="plan__price">500 <span>₴</span></p>
+            <ul class="plan__list">
+              <li>Чоловіча стрижка</li>
+              <li>Миття голови</li>
+              <li>Укладання волосся</li>
+            </ul>
+            <a class="btn btn--ghost plan__btn" href="#booking">Обрати</a>
+          </article>
+
+          <article class="plan plan--featured">
+            <div class="plan__ribbon">Топ вибір</div>
+            <h3 class="plan__name">Повний догляд</h3>
+            <p class="plan__price">750 <span>₴</span></p>
+            <ul class="plan__list">
+              <li>Чоловіча стрижка</li>
+              <li>Корекція бороди</li>
+              <li>Гаряче розпарювання</li>
+              <li>Преміум стайлінг</li>
+            </ul>
+            <a class="btn btn--accent plan__btn" href="#booking">Записатись</a>
+          </article>
+
+          <article class="plan">
+            <h3 class="plan__name">Батько & Син</h3>
+            <p class="plan__price">900 <span>₴</span></p>
+            <ul class="plan__list">
+              <li>Дві чоловічі стрижки</li>
+              <li>Кава або віскі для тата</li>
+              <li>Сімейне фото на пам'ять</li>
+            </ul>
+            <a class="btn btn--ghost plan__btn" href="#booking">Обрати</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ТАБЛИЦЯ (ДОДАТКОВІ ПОСЛУГИ) -->
+    <section class="price-list">
+      <div class="container">
+        <h2 class="section-title">Додаткові послуги</h2>
+        <div class="table-wrap">
+          <table class="price-table">
+            <caption>Можна додати до будь-якого пакету (Ціни 2024 року)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Послуга</th>
+                <th scope="col">Час виконання</th>
+                <th scope="col">Вартість</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Камуфлювання сивини</th>
+                <td>+ 20 хв</td>
+                <td>400 ₴</td>
+              </tr>
+              <tr>
+                <th scope="row">Чорна маска (очищення пір)</th>
+                <td>+ 15 хв</td>
+                <td>200 ₴</td>
+              </tr>
+              <tr>
+                <th scope="row">Воскова депіляція (ніс/вуха)</th>
+                <td>+ 10 хв</td>
+                <td>150 ₴</td>
+              </tr>
+              <tr>
+                <th scope="row">Преміум миття з масажем голови</th>
+                <td>+ 15 хв</td>
+                <td>100 ₴</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- БАРБЕРИ МІСЯЦЯ -->
+    <section class="barbers" id="barbers">
+      <div class="container">
+        <h2 class="section-title">Барбери місяця</h2>
+        <div class="cards">
+          <article class="barber-card">
+            <div class="card__photo-wrap">
+              <img src="img/barber-1.jpg" alt="Барбер Альона" width="380" height="320" class="barber-card__photo" loading="lazy" decoding="async">
+            </div>
+            <div class="barber-card__footer">
+              <span class="barber-card__name">Альона</span>
+              <span class="barber-card__rating">★ 5.0</span>
+            </div>
+          </article>
+          <article class="barber-card">
+            <div class="card__photo-wrap">
+              <img src="img/barber-2.jpg" alt="Барбер Ліля" width="380" height="320" class="barber-card__photo" loading="lazy" decoding="async">
+            </div>
+            <div class="barber-card__footer">
+              <span class="barber-card__name">Ліля</span>
+              <span class="barber-card__rating">★ 5.0</span>
+            </div>
+          </article>
+          <article class="barber-card">
+            <div class="card__photo-wrap">
+              <img src="img/barber-3.jpg" alt="Барбер Микита" width="380" height="320" class="barber-card__photo" loading="lazy" decoding="async">
+            </div>
+            <div class="barber-card__footer">
+              <span class="barber-card__name">Микита</span>
+              <span class="barber-card__rating">★ 5.0</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВІДЕО -->
+    <section class="hero-video">
+      <video class="hero-video__media" src="video/barbershop-bg.mp4" poster="img/video-poster.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+      <div class="container hero-video__inner">
+        <h2 class="hero-video__title">Атмосфера, у яку хочеться повертатись</h2>
+        <p class="hero-video__text">Подивіться, як проходить звичайний день у нашому залі.</p>
+        <a class="btn btn--primary" href="#booking">Відчути атмосферу</a>
+      </div>
+    </section>
+
+    <!-- ФОРМА ЗАПИСУ -->
+    <section class="booking" id="booking">
+      <div class="container">
+        <h2 class="section-title">Онлайн запис</h2>
+        <form class="form" action="https://formspree.io/f/ВАШ_КОД" method="post">
+          <input type="hidden" name="_subject" value="🔥 Новий запис у CHINSKY!">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px">
+
+          <fieldset class="form__group">
+            <legend class="form__legend">Контактні дані</legend>
+            <label class="form__label" for="name">Ваше ім'я</label>
+            <input class="form__field" type="text" id="name" name="name" placeholder="Олександр" required>
+
+            <label class="form__label" for="phone">Номер телефону</label>
+            <input class="form__field" type="tel" id="phone" name="phone" placeholder="+380 __ ___ __ __" pattern="\+?380[0-9]{9}" title="Введіть номер у форматі +380XXXXXXXXX" required>
+          </fieldset>
+
+          <fieldset class="form__group">
+            <legend class="form__legend">Деталі візиту</legend>
+            <label class="form__label" for="date">Бажана дата</label>
+            <input class="form__field" type="date" id="date" name="date" required>
+            
+            <label class="form__label" for="master">Барбер</label>
+            <select class="form__field" id="master" name="master">
+              <option value="any">Будь-який вільний</option>
+              <option value="alyona">Альона</option>
+              <option value="lilya">Ліля</option>
+              <option value="mykyta">Микита</option>
+            </select>
+          </fieldset>
+
+          <fieldset class="form__group">
+            <legend class="form__legend">Зручний спосіб зв'язку</legend>
+            <div class="form__radio-row">
+              <input type="radio" id="call" name="contact_method" value="call" checked>
+              <label for="call">Дзвінок</label>
+              <input type="radio" id="telegram" name="contact_method" value="telegram">
+              <label for="telegram">Telegram</label>
+            </div>
+          </fieldset>
+
+          <div class="form__checkbox-row">
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">Погоджуюсь на обробку персональних даних</label>
+          </div>
+
+          <button class="btn btn--primary form__submit" type="submit">Підтвердити запис</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__title">CHINSKY BARBERSHOP</p>
+        <p class="footer__subtitle">Твій стиль у центрі Львова</p>
+      </div>
+      <div class="footer__contacts">
+        <p class="footer__contact-title">Контакти:</p>
+        <a href="tel:+380960000000" class="footer__link">+38 (096) 000-00-00</a>
+        <a href="mailto:lvivchinsky@gmail.com" class="footer__link">lvivchinsky@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
